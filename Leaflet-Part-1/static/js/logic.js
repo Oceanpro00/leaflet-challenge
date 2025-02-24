@@ -1,18 +1,10 @@
 // Create the 'basemap' tile layer that will be the background of our map.
 
 
-// OPTIONAL: Step 2
-// Create the 'street' tile layer as a second background of the map
-
-
 // Create the map object with center and zoom options.
 
 
 // Then add the 'basemap' tile layer to the map.
-
-// OPTIONAL: Step 2
-// Create the layer groups, base maps, and overlays for our two sets of data, earthquakes and tectonic_plates.
-// Add a control to the map that will allow the user to change which layers are visible.
 
 
 // Make a request that retrieves the earthquake geoJSON data.
@@ -47,8 +39,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
     onEachFeature: function (feature, layer) {
 
     }
-  // OPTIONAL: Step 2
-  // Add the data to the earthquake layer instead of directly to the map.
+  
   }).addTo(map);
 
   // Create a legend control object.
@@ -72,13 +63,4 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
   // Finally, add the legend to the map.
 
 
-  // OPTIONAL: Step 2
-  // Make a request to get our Tectonic Plate geoJSON data.
-  d3.json("https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json").then(function (plate_data) {
-    // Save the geoJSON data, along with style information, to the tectonic_plates layer.
-
-
-    // Then add the tectonic_plates layer to the map.
-
-  });
 });
